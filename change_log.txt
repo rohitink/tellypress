@@ -1,0 +1,7 @@
+Changes with Theme Updates:
+
+Version 1.0:
+
+	i) Initial Release
+	
+	
