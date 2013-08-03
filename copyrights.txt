@@ -24,9 +24,8 @@ Thank for Using TellyPress Wordpress Theme.
 	The Following Javascript files are not the part of the Underscores theme framework and have been taken from other sources.
 	
 		->superfish.js
-		->supersubs.js
 		
-			The above 2 files  are Dual licensed under the MIT and GPL licenses:
+			The above file is Dual licensed under the MIT and GPL licenses:
 					 * 	http://www.opensource.org/licenses/mit-license.php
 					 * 	http://www.gnu.org/licenses/gpl.html
 					 

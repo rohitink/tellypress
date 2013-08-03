@@ -61,16 +61,13 @@ function tellypress_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+	
+	add_editor_style( 'custom-editor-style.css' );
 }
 endif; // tellypress_setup
 add_action( 'after_setup_theme', 'tellypress_setup' );
 
 /*Editor Style Sheer*/
-function my_theme_add_editor_styles() {
-    add_editor_style( 'custom-editor-style.css' );
-}
-add_action( 'init', 'my_theme_add_editor_styles' );
-
 
 /**
  * Register widgetized area and update sidebar with default widgets
@@ -91,7 +88,12 @@ add_action( 'widgets_init', 'tellypress_widgets_init' );
  * Enqueue scripts and styles
  */
 function tellypress_scripts() {
-	wp_enqueue_style( 'tellypress-style', get_stylesheet_uri() );
+	
+	wp_enqueue_style('fonts', 'http://fonts.googleapis.com/css?family=Rum+Raisin|Open+Sans|Open+Sans+Condensed:700|Roboto:400,300'); 
+	
+	wp_enqueue_style( 'tellypress-style', get_stylesheet_uri(), array('fonts') );
+	
+	wp_enqueue_style( 'superfish-style', get_stylesheet_directory_uri().'/css/superfish.css', array(), false, false);
 
 	wp_enqueue_script( 'tellypress-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
@@ -104,17 +106,26 @@ function tellypress_scripts() {
 	if ( is_singular() && wp_attachment_is_image() ) {
 		wp_enqueue_script( 'tellypress-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
+	
+	
+	wp_enqueue_script('jquery');
+	/*can not use the hoverIntent provided in wordpress core, as it is version r6 and does not support event delegation. */
+	wp_enqueue_script('hoverIntent-r7', get_template_directory_uri() . '/js/hoverIntent.js', array('jquery'), 'r7');
+	wp_enqueue_script(
+		'superfish',
+		get_stylesheet_directory_uri() . '/js/superfish.js',
+		array( 'jquery','hoverIntent-r7' ), '1.5.13'
+	);
+	
+	wp_enqueue_script(
+		'custom-script',
+		get_stylesheet_directory_uri() . '/js/custom.js',
+		array( 'jquery','superfish' )
+	);
+	
 }
 add_action( 'wp_enqueue_scripts', 'tellypress_scripts' );
 
-/**
- * Implement the Custom Header feature.
- */
-//require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
 require get_template_directory() . '/inc/template-tags.php';
 
 /**

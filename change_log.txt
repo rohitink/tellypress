@@ -4,4 +4,18 @@ Version 1.0:
 
 	i) Initial Release
 	
+Version 1.0.1
+
+	This Version includes lot of regular bug fixes.
+		
+	i)      Layout problem when menu is more than 1 line. Fixed.
+	ii)     Added styling for heading tags.
+	iii)	Author is linked to author archive.
+	iv)		Problem with menu drop drop down, it opens and closes quickly, makes it very hard to click on sub menu item. Fixed.
+	v)		All External scripts and styles, enqueued from tellypress_scripts() in functions.php
+	vi)		Now using core bundled jquery
+	vii)	removed the my_theme_add_editor_styles() function.
+	viii)	Deleted custom-header.php from inc folder as it was not being used.
+	ix)		Deleted layouts folder as it was not being used.		
+	
 	

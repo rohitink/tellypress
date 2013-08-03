@@ -14,12 +14,6 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<link href='http://fonts.googleapis.com/css?family=Rum+Raisin|Open+Sans|Open+Sans+Condensed:700|Roboto:400,300' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" media="screen" href="<?php echo get_template_directory_uri(); ?>/css/superfish.css">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/hoverIntent.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/superfish.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/custom.js"></script>
 <?php wp_head(); ?>
 
 </head>
@@ -38,12 +32,12 @@
         
         </div>
 	</header><!-- #masthead -->
-
+	<div id="nav_container">
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<h1 class="menu-toggle"><?php _e( 'Menu', 'tellypress' ); ?></h1>
 			<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'tellypress' ); ?>"><?php _e( 'Skip to content', 'tellypress' ); ?></a></div>
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
-        
+      </div>
 	<div id="main" class="site-main">

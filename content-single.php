@@ -12,7 +12,7 @@
 			<?php //tellypress_posted_on(); ?>
             
 				<span class="author-link">
-				<?php printf( __( '<img class=icon src='.get_template_directory_uri().'/images/author.png><a href='.the_author_meta('user_url').'> %1$s</a> ', 'tellypress' ), get_the_author() ); ?>
+				<?php printf( __( '<img class=icon src='.get_template_directory_uri().'/images/author.png>'.the_author_posts_link(), 'tellypress' ) ); ?>
 				</span>
                 <span class="date-link">
 				<?php printf( __( '<img class=icon src='.get_template_directory_uri().'/images/date.png> %1$s', 'tellypress' ), the_date() ); ?>

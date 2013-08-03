@@ -4,7 +4,7 @@ Theme URI: http://github.com/rohitink/tellypress/
 Author: Rohit Tripathi
 Author URI: http://github.com/rohitink
 Description: TellyPress is an Attractive Magazing theme suitable for Entertainment Blogs.
-Version: 1.0
+Version: 1.0.1
 License: GNU General Public License V3
 License URI: license.txt
 Tags: light, custom-background, two-columns, white, rtl-language-support, sticky-post, threaded-comments, right-sidebar, custom-menu
@@ -383,18 +383,21 @@ a:active {
 
 /* =Menu
 ----------------------------------------------- */
-
+#nav_container {
+	width: 960px;
+	margin: auto;
+}
 .main-navigation {
 	clear: both;
-	display: block;
+	display: inline-block;
 	width: 960px;
 	margin: auto;
 	background: #eee;
 	border-bottom: solid 4px #000;
-	height: 42px;
-	padding: 4px;
+	padding: 4px 4px 0px 4px;
 	position: relative;
 		top: -10px;
+	clear: both;	
 }
 .main-navigation ul {
 	list-style: none;
@@ -418,14 +421,13 @@ a:active {
 .main-navigation a:hover {
 	background: #000;
 	color: #fff;
-	border-radius: 4px;
 }
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	display: none;
 	float: left;
 	position: absolute;
-		top: 2.9em;
+		top: 2.6em; /*fixed issue which causes drop down to disappear real quick*/
 		left: 0;
 	z-index: 999999;
 	background: #000;
@@ -504,7 +506,25 @@ a:active {
 	clear: both;
 	margin: 0 0 1.5em;
 }
-
+h1.page-title {
+	font-family: 'Open Sans Condensed', Arial, sans-serif;
+	text-transform: uppercase;
+	padding: 5px;
+	padding-left: 10px;
+	font-weight: light;
+	font-size: 28px;
+	color: #cc0;
+	background: #000;
+	margin-bottom: 20px;
+	border-radius: 5px;
+}
+h1.page-title a {
+	text-decoration: none;
+	color: #999;
+}
+h1.page-title a:hover {
+	color: #Cc0;
+}
 
 /* =Asides
 ----------------------------------------------- */
@@ -840,6 +860,35 @@ aside.widget_nav_menu ul ul li {
 #footer-navigation ul ul {
 	display: none;
 }
+/*heading tags*/
+.single-entry-content h1 {
+	font-family: 'Open Sans Condensed', Arial, sans-serif;
+	font-size: 32px;
+	text-transform: uppercase;
+}
+.single-entry-content h2 {
+	font-family: 'Open Sans Condensed', Arial, sans-serif;
+	font-size: 27px;
+	text-transform: uppercase;
+}
+.single-entry-content h3 {
+	font-family: 'Open Sans Condensed', Arial, sans-serif;
+	font-size: 25px;
+}
+.single-entry-content h4 {
+	font-family: 'Open Sans Condensed', Arial, sans-serif;
+	font-size: 23px;
+}
+.single-entry-content h5 {
+	font-family: 'Open Sans Condensed', Arial, sans-serif;
+	font-size: 20px;
+}
+.single-entry-content h6 {
+	font-family: 'Open Sans Condensed', Arial, sans-serif;
+	font-size: 17px;
+}
+
+
 
 /*POSTS PAGE*/
 
