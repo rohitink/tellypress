@@ -14,7 +14,7 @@
     <div id="footer-container">
             <div class="site-info">
                 <?php do_action( 'tellypress_credits' ); ?>
-                <a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'tellypress' ); ?>" rel="generator"><?php printf( __( 'Powered by %s', 'tellypress' ), 'WordPress'); ?></a>
+                <a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'tellypress' ); ?>" rel="generator"><?php printf( __( 'Powered by %s', 'tellypress' ), 'WordPress'); ?></a> &amp; <a href="http://wordpress.org/themes/tellypress" title="<?php esc_attr_e( 'TellyPress theme by Rohit Tripathi', 'tellypress' ); ?>"><?php printf( __( '%s', 'tellypress' ), 'TellyPress'); ?></a>
             </div><!-- .site-info -->
             
             <div id="footer-navigation">

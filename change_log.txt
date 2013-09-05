@@ -18,4 +18,11 @@ Version 1.0.1
 	viii)	Deleted custom-header.php from inc folder as it was not being used.
 	ix)		Deleted layouts folder as it was not being used.		
 	
-	
+Version 1.2.1
+
+	i) Added Sytling for Code, Blockquote, Tables.
+	ii) Improved Comment Section
+	iii) Styling for Searchbar in sidebar.
+	iv) Changes to Main Navigation
+	v) Better Footer Styling
+	vi) Replaced Title Font	

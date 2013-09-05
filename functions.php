@@ -89,7 +89,7 @@ add_action( 'widgets_init', 'tellypress_widgets_init' );
  */
 function tellypress_scripts() {
 	
-	wp_enqueue_style('fonts', 'http://fonts.googleapis.com/css?family=Rum+Raisin|Open+Sans|Open+Sans+Condensed:700|Roboto:400,300'); 
+	wp_enqueue_style('fonts', '//fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:700,300|Roboto:400,300'); 
 	
 	wp_enqueue_style( 'tellypress-style', get_stylesheet_uri(), array('fonts') );
 	

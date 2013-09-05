@@ -4,7 +4,7 @@ Theme URI: http://github.com/rohitink/tellypress/
 Author: Rohit Tripathi
 Author URI: http://github.com/rohitink
 Description: TellyPress is an Attractive Magazing theme suitable for Entertainment Blogs.
-Version: 1.0.1
+Version: 1.2.1
 License: GNU General Public License V3
 License URI: license.txt
 Tags: light, custom-background, two-columns, white, rtl-language-support, sticky-post, threaded-comments, right-sidebar, custom-menu
@@ -47,6 +47,10 @@ html {
 }
 body {
 	background: #fff;
+}
+::selection {
+	background: #000;
+	color: #fff;
 }
 article,
 aside,
@@ -417,6 +421,7 @@ a:active {
 	text-transform: uppercase;
 	display: inline-block;
 	padding: 5px 8px;
+	font-weight: 700;
 }
 .main-navigation a:hover {
 	background: #000;
@@ -427,15 +432,21 @@ a:active {
 	display: none;
 	float: left;
 	position: absolute;
-		top: 2.6em; /*fixed issue which causes drop down to disappear real quick*/
+		top: 2.8em; /*fixed issue which causes drop down to disappear real quick*/
 		left: 0;
 	z-index: 999999;
 	background: #000;
+	min-width: 150px;
+	max-width: 200px;
 }
 .main-navigation ul ul a {
 	color: #ddd;
-	font-family: 'Open Sans Condensed', sans-serif;
-	font-weight: 100;
+	font-family: 'Open Sans Condensed', Arial, Helvetica, sans-serif;
+	font-weight: 700;
+	font-size: 18px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	color: #777;
 }
 .main-navigation ul ul a:hover {
 	color: #fff;
@@ -446,11 +457,14 @@ a:active {
 	top: 0;
 }
 .main-navigation ul ul a {
-	width: 200px;
+	min-width: 150px;
+	max-width: 200px;
 }
 .main-navigation ul ul li {
 }
 .main-navigation li:hover > a {
+	background: #000;
+	color: #fff;
 }
 .main-navigation ul ul :hover > a {
 }
@@ -511,7 +525,7 @@ h1.page-title {
 	text-transform: uppercase;
 	padding: 5px;
 	padding-left: 10px;
-	font-weight: light;
+	font-weight: bold;
 	font-size: 28px;
 	color: #cc0;
 	background: #000;
@@ -666,8 +680,9 @@ body {
 		float: left;
 	}
 	h1.site-title {
-		font-family: 'Rum Raisin', Geneva, Arial, sans-serif;
-		font-size: 64px;
+		font-family: 'Open Sans Condensed', Geneva, Arial, sans-serif;
+		font-weight: bold;
+		font-size: 54px;
 	}
 	h1.site-title a {
 		color: #dcce30;
@@ -677,7 +692,7 @@ body {
 		font-family: 'Roboto', Arial, sans-serif;
 		font-weight: bold;
 		color: #ddd;
-		font-size: 23px;
+		font-size: 20px;
 		padding-left: 7px;
 	}
 /*header search bar */
@@ -734,10 +749,11 @@ body {
 		display: block;
 	}
 	.entry-header img {
-		border: solid 2px #ff0;
-		border-top: solid 5px #FF0;
+		border: solid 4px #ff0;
+		border-top: solid 5px #ee0;
+		/*outline: solid 7px #f1f1f1;*/
 		float: left;
-		margin-right: 10px;
+		margin-right: 16px;
 		clear: left;
 		margin-bottom: 20px;
 	}
@@ -745,6 +761,8 @@ body {
 		display: inline-block;
 		max-width: 450px;
 		font-family: 'Open Sans Condensed', Arial, sans-serif;
+		font-weight: 700;
+		margin-top: -14px;
 		
 	}
 	h1.entry-title a {
@@ -804,7 +822,7 @@ aside.widget ul {
 }
 aside.widget > ul
 {
-	padding-top: 15px;
+	padding-top: 10px;
 }
 aside.widget ul li {
 	border-bottom: dotted 1px #CCC;
@@ -826,6 +844,15 @@ aside.widget_nav_menu ul ul li {
 .tagcloud, #calendar_wrap, .textwidget {
 	padding: 10px;
 }
+aside.widget_search {
+	background: none;
+}
+aside.widget_search input[type=search] {
+	width: 230px;
+}
+aside.widget_search input[type=submit] {
+	display: inline;
+}
 /* Footer Area */
 
 #colophon {
@@ -837,7 +864,10 @@ aside.widget_nav_menu ul ul li {
 	color: #CCC;
 }
 #colophon a {
-	color: #FFCE08;
+	color: #ddd;
+}
+#colophon a:hover {
+	color: #F96;
 }
 #footer-container {
 	width: 960px;
@@ -861,34 +891,102 @@ aside.widget_nav_menu ul ul li {
 	display: none;
 }
 /*heading tags*/
-.single-entry-content h1 {
+.comment h1, .single-entry-content h1 {
 	font-family: 'Open Sans Condensed', Arial, sans-serif;
 	font-size: 32px;
 	text-transform: uppercase;
+	font-weight: 700;
 }
-.single-entry-content h2 {
+.comment h2, .single-entry-content h2 {
 	font-family: 'Open Sans Condensed', Arial, sans-serif;
 	font-size: 27px;
 	text-transform: uppercase;
+	font-weight: 700;
 }
-.single-entry-content h3 {
+.comment h3, .single-entry-content h3 {
 	font-family: 'Open Sans Condensed', Arial, sans-serif;
 	font-size: 25px;
 }
-.single-entry-content h4 {
+.comment h4, .single-entry-content h4 {
 	font-family: 'Open Sans Condensed', Arial, sans-serif;
 	font-size: 23px;
+	font-weight: 700;
 }
-.single-entry-content h5 {
+.comment h5, .single-entry-content h5 {
 	font-family: 'Open Sans Condensed', Arial, sans-serif;
 	font-size: 20px;
+	font-weight: 700;
 }
-.single-entry-content h6 {
+.comment h6, .single-entry-content h6 {
 	font-family: 'Open Sans Condensed', Arial, sans-serif;
 	font-size: 17px;
+	font-weight: 700;
+}
+.comment blockquote, .single-entry-content blockquote {
+	background: #eee;
+	border-bottom: 3px solid #fc3;
+	border-top: 3px solid #333;
+	padding: 10px;
+	padding-bottom: 0px;
+	font-size: 14px;
+	margin-bottom: 10px;
+	box-shadow: 0px 4px #000;
+}
+.comment td, .single-entry-content td {
+	padding: 5px;
+}
+.comment th, .single-entry-content th {
+	background: #222;
+	color: #fc3;
+	font-family: "Open Sans Condensed", Arial, sans-serif;
+	padding: 5px;
 }
 
-
+.comment table tr:nth-child(even), .single-entry-content table tr:nth-child(even) {
+	background: #eee;
+	border-bottom: solid 1px #ddd;
+}
+.comment table tr:nth-child(odd), .single-entry-content table tr:nth-child(odd) {
+	background: #f9f9f9;
+	border-bottom: solid 1px #ddd;
+}
+.comment-content ol ol, .single-entry-content ol ol {
+	list-style: lower-alpha;
+}
+.comment-content ol ol ol, .single-entry-content ol ol ol {
+	list-style: lower-roman;
+}
+.comment-content ul ul.single-entry-content ul ul {
+	list-style: circle;
+}
+.comment-content ul ul ul, .single-entry-content ul ul ul {
+	list-style:square;
+}
+.comment code, .single-entry-content code {
+	background: #eee;
+	border: solid 1px #F93;
+	color: #F63;
+	padding: 0px 2px;
+}
+.comment-content ul {
+}
+.comment-content ol {
+	list-style: decimal !important;
+}
+.comment-content ul li {
+	list-style-type: disc !important;
+	background: none !important;
+	padding: 0px 0px 0px 5px;
+}
+.comment-content ol li {
+	list-style: decimal !important;
+	background: none !important;
+	padding: 0 0 0 5px;
+}
+address {
+	padding-left: 15px;
+	font-style: oblique;
+}
 
 /*POSTS PAGE*/
 
@@ -901,6 +999,7 @@ article h1.single-entry-title {
 	width: 100%;
 	border-bottom: solid 3px #000;
 	margin-bottom: 10px;
+	font-weight: 700;
 }
 article .single-entry-meta {
 	border-bottom: solid 1px #ddd;
@@ -983,7 +1082,7 @@ cite.fn {
 	font-size: 24px;
 	font-family: 'Open Sans Condensed', Verdana, Geneva, sans-serif;
 	color: #222;
-	font-weight: 600;
+	font-weight: 700;
 	text-transform: uppercase;
 	display: block;
 	margin-bottom: 10px;
@@ -1019,6 +1118,7 @@ h3#reply-title {
 	color: #444;
 	font-size:28px;
 	text-transform: uppercase;
+	font-weight: 700;
 }
 .required {
 	color: red;
